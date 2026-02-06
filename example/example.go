@@ -22,7 +22,8 @@ func main() {
 		PingTimeout:    2 * time.Second,
 	})
 	if err != nil {
-		panic(err)
+		println("Failed to connect to MongoDB:", err.Error())
+		return
 	}
 	println("Connected to MongoDB in", time.Since(start).String())
 
@@ -41,7 +42,8 @@ func main() {
 	start = time.Now()
 	var foundUser User
 	if err := users.FindOne(context.Background(), bson.M{"name": "Alice"}).Decode(&foundUser); err != nil {
-		panic(err)
+		println("Failed to find user:", err.Error())
+		return
 	}
 	println("Found user in", time.Since(start).String())
 
