@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func hello() {
+func Hello() {
 	s := "gopher"
 	fmt.Printf("Hello and welcome, %s!\n", s)
 
