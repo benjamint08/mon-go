@@ -2,7 +2,7 @@
 
 barebones MongoDB client wrapper for go (driver v2)
 
-[full example](https://github.com/benjamint08/mon-go/blob/main/example/example.go)
+[full example](https://github.com/benjamint08/mon-go/blob/master/example/example.go)
 
 ## Install
 
